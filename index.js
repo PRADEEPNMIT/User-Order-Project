@@ -9,7 +9,7 @@ const db = require('./app/config/db.config.js');
   
 // force: true will drop the table if it already exists
 db.sequelize.sync({force: false}).then(() => {
-  console.log('Drop and Resync with { force: true }');
+  console.log('Database initialised and synchronised successfully and is now connected');
 });
 
 require('./app/route/user.route.js')(app);
